@@ -1,38 +1,88 @@
-.App {
-  text-align: center;
+/* sidebar  */
+body{
+    overflow: hidden;
+    height: 100vh;
+}
+.sidebar{
+  height: 96vh;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.sidebar ul {
+    padding: 0rem 10px;
+}
+.sidebar ul li{
+    list-style-type: none;
+}
+.sidebar ul li a{
+   color: #fff;
+   text-decoration: none;
+   line-height: 2em;
+}
+.sidebar ul li a:hover{
+   color: #d6cccc;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+/* make my trip start */
+.box-container{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 5px;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+.box{
+    border: 1px solid black;
+    padding: 10px;
+    height: 50px;
+    width: 50px;
 }
 
-.App-link {
-  color: #61dafb;
+/* stars component  */
+.stars{
+    cursor: pointer;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.stars > span{
+    font-size: 3em;
+}
+
+.yellow{
+    color: rgb(255, 217, 0);
+}
+
+.red{
+    color: rgb(255, 0, 0);
+}
+
+.green{
+    color: rgb(0, 255, 34);
+}
+
+/* Password Generator */
+.checkboxes{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
+
+
+/* test */
+.parent-box{
+    width: 100px;
+    height: 100px;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+}
+.test-box{
+    width: 50px;
+    height: 50px;
+    border: 1px solid #000;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+}
+.top{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
 }

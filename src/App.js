@@ -1,23 +1,32 @@
-import logo from './logo.svg';
+import ReactDOM from "react-dom/client";
+import { BrowserRouter, Routes, Route } from "react-router-dom";
 import './App.css';
+import PasswordGenerator from './PasswordGenerator';
+import StarRating from './StarRating';
+import MakeMyTrip from './makemytrip';
+import Layout from "./components/Layout";
+import NoPage from "./components/NoPage";
+import TrafficLight from "./TrafficLight";
+import Todo from "./todo";
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div className="container-fluid">
+     <BrowserRouter>
+      <Routes>
+        <Route path="/" element={<Layout />}>
+          <Route index element={<MakeMyTrip />} />
+          <Route path="star-rating" element={<StarRating />} />
+          <Route path="password-generator" element={<PasswordGenerator />} />
+          <Route path="traffic-light" element={<TrafficLight />} />
+          <Route path="todo" element={<Todo />} />
+          <Route path="*" element={<NoPage />} />
+        </Route>
+      </Routes>
+    </BrowserRouter>
+     {/* <MakeMyTrip /> */}
+     {/* <StarRating /> */}
+      {/* <PasswordGenerator /> */}
     </div>
   );
 }
