@@ -1,4 +1,4 @@
-import React, { useEffect, useMemo, useState } from 'react';
+import React, { useEffect, useState } from 'react';
 
 const url = "https://dummyjson.com/products";
 
@@ -24,6 +24,7 @@ const Debounce = () => {
         return () => {
             clearTimeout(debounceTimeout);
         };
+        // eslint-disable-next-line react-hooks/exhaustive-deps
     }, [search]);
 
     const handleInputChange = (e) => {
