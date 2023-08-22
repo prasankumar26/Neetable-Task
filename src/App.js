@@ -7,6 +7,7 @@ import Layout from "./components/Layout";
 import NoPage from "./components/NoPage";
 import TrafficLight from "./TrafficLight";
 import Todo from "./todo";
+import Debounce from "./debounce";
 
 function App() {
   return (
@@ -19,13 +20,11 @@ function App() {
           <Route path="password-generator" element={<PasswordGenerator />} />
           <Route path="traffic-light" element={<TrafficLight />} />
           <Route path="todo" element={<Todo />} />
+          <Route path="debounce" element={<Debounce />} />
           <Route path="*" element={<NoPage />} />
         </Route>
       </Routes>
     </BrowserRouter>
-     {/* <MakeMyTrip /> */}
-     {/* <StarRating /> */}
-      {/* <PasswordGenerator /> */}
     </div>
   );
 }

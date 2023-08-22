@@ -18,9 +18,10 @@ const Sidebar = () => {
             <Link to="/traffic-light" className='btn bg-danger w-100 mb-2'>Traffic Light</Link>
         </li>
         <li>
-            <Link to="/todo" className='btn bg-danger w-100 mb-2'>
-                Todo app
-            </Link>
+            <Link to="/todo" className='btn bg-danger w-100 mb-2'> Todo app </Link>
+        </li>
+        <li>
+            <Link to="/debounce" className='btn bg-danger w-100 mb-2'> Debounce </Link>
         </li>
         </ul>
         </nav>
